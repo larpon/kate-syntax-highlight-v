@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE language SYSTEM "language.dtd">
+
+<!--
+This file is part of KDE's Kate project
+
+V.XML supports syntax highlighting for the V programming language
+under Kate. V is a simple, fast, safe, compiled language for developing maintainable software.
+V is developed by Alexander Medvednikov.
+
+Copyright (C) 2019, Lars Pontoppidan <dev.larpon@gmail.com>
+
+This program, including associated files, is free software.  You may
+distribute it and/or modify it under the terms of the GNU General Public
+License as published by the Free Software Foundation; either Version 2 of
+the license, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License
+for more details.
+
+You should have received a copy of the GNU General Public License along
+with this program; if not, write to the Free Software Foundation, Inc.,
+51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
+-->
+
+
+<language name="V" version="0.2" kateversion="1.0" section="Sources" indenter="cstyle" extensions="*.v,*.vh,*.vsh" author="Lars Pontoppidan (dev.larpon@gmail.com)" license="GPLv2+">
+    <highlighting>
+    <list name="keywords">
+      <item>mut</item>
+      <item>pub</item>
+      <item>assert</item>
+      <item>sizeof</item>
+      <item>type</item>
+      <item>enum</item>
+      <item>in</item>
+      <item>or</item>
+      <item>defer</item>
+      <item>break</item>
+      <item>module</item>
+      <item>const</item>
+      <item>continue</item>
+      <item>if</item>
+      <item>else</item>
+      <item>$if</item>
+      <item>$else</item>
+      <item>for</item>
+      <item>fn</item>
+      <item>go</item>
+      <item>goto</item>
+      <item>import</item>
+      <item>interface</item>
+      <item>map</item>
+      <item>return</item>
+      <item>struct</item>
+      <item>match</item>
+    </list>
+    <list name="types">
+      <item>int</item>
+      <item>i8</item>
+      <item>i16</item>
+      <item>i64</item>
+      <item>i128</item>
+      <item>u16</item>
+      <item>u32</item>
+      <item>u64</item>
+      <item>u128</item>
+      <item>f32</item>
+      <item>f64</item>
+      <item>bool</item>
+      <item>byte</item>
+      <item>byteptr</item>
+      <item>voidptr</item>
+      <item>rune</item>
+      <item>string</item>
+      <item>ustring</item>
+      <item>none</item>
+    </list>
+    <list name="flags">
+      <item>#flag</item>
+      <item>#include</item>
+    </list>
+    <list name="tag_attributes">
+        <item>[typedef]</item>
+    </list>
+    <list name="modules">
+      <item>os</item>
+      <item>flag</item>
+      <item>time</item>
+    </list>
+    <list name="builtin">
+      <item>len</item>
+      <item>println</item>
+      <item>eprintln</item>
+    </list>
+    <list name="predeclared">
+      <item>false</item>
+      <item>true</item>
+      <item>linux</item>
+      <item>windows</item>
+      <item>mac</item>
+      <item>freebsd</item>
+      <item>openbsd</item>
+      <item>netbsd</item>
+      <item>dragonfly</item>
+      <item>js</item>
+      <item>android</item>
+      <item>solaris</item>
+    </list>
+    <contexts>
+      <context name="normal" attribute="Normal Text" lineEndContext="#stay">
+        <keyword attribute="Keyword" context="#stay" String="keywords" />
+        <keyword attribute="Flags" context="#stay" String="flags" />
+        <keyword attribute="Module" context="#stay" String="modules" />
+        <keyword attribute="Tag Attributes" context="#stay" String="tag_attributes" />
+        <keyword attribute="Predeclared Identifier" context="#stay" String="predeclared"  />
+        <keyword attribute="Data Type" context="#stay" String="types"       />
+        <keyword attribute="Builtin Function" context="#stay" String="builtin"  />
+        <DetectIdentifier />
+        <DetectChar attribute="Symbol" context="#stay" char="{" beginRegion="Brace1" />
+        <DetectChar attribute="Symbol" context="#stay" char="}" endRegion="Brace1"   />
+        <Detect2Chars attribute="Comment" context="Commentar 1" char="/" char1="/"   />
+        <Detect2Chars attribute="Comment" context="Commentar 2" char="/" char1="*"   />
+        <Int attribute="Decimal" context="#stay" />
+        <Float attribute="Float" context="#stay" />
+        <HlCOct attribute="Octal" context="#stay"/>
+        <HlCHex attribute="Hex" context="#stay"/>
+        <HlCChar attribute="Char" context="#stay" />
+        <DetectChar attribute="String" context="String" char="'" />
+        <!--<DetectChar attribute="String" context="Multiline String" char="`"/>-->
+        <AnyChar attribute="Symbol" context="#stay" String=":!%&amp;()+,-/.*&lt;=&gt;?[]|~^&#59;"/>
+      </context>
+
+      <context attribute="Comment" lineEndContext="#pop" name="Commentar 1">
+        <LineContinue attribute="Comment" context="#stay"/>
+        <DetectSpaces />
+        <IncludeRules context="##Alerts" />
+        <DetectIdentifier />
+      </context>
+
+      <context attribute="Comment" lineEndContext="#stay" name="Commentar 2">
+        <DetectSpaces />
+        <Detect2Chars attribute="Comment" context="#pop" char="*" char1="/" endRegion="Comment"/>
+        <IncludeRules context="##Alerts" />
+        <DetectIdentifier />
+      </context>
+
+      <context attribute="String" lineEndContext="#pop" name="String">
+        <LineContinue  attribute="String" context="#stay" />
+        <HlCStringChar attribute="String Char" context="#stay" />
+        <DetectChar    attribute="String" context="#pop" char="'" />
+      </context>
+
+      <context attribute="String" lineEndContext="#stay" name="Multiline String">
+        <LineContinue attribute="String" context="#stay"/>
+        <HlCStringChar attribute="String Char" context="#stay"/>
+        <DetectChar attribute="String" context="#pop" char="`"/>
+      </context>
+    </contexts>
+    <itemDatas>
+      <itemData name="Normal Text"            defStyleNum="dsNormal"       spellChecking="false"/>
+      <itemData name="Keyword"                defStyleNum="dsKeyword"      spellChecking="false"/>
+      <itemData name="Flags"                  defStyleNum="dsPreprocessor" spellChecking="false"/>
+      <itemData name="Module"                 defStyleNum="dsImport"       spellChecking="false"/>
+      <itemData name="Tag Attribute"          defStyleNum="dsAttribute"    spellChecking="false"/>
+      <itemData name="Predeclared Identifier" defStyleNum="dsOthers"       spellChecking="false" />
+      <itemData name="Builtin Function"       defStyleNum="dsBuiltIn"      spellChecking="false" />
+      <itemData name="Data Type"              defStyleNum="dsDataType"     spellChecking="false"/>
+      <itemData name="String Char"            defStyleNum="dsChar"    />
+      <itemData name="String"                 defStyleNum="dsString"  />
+      <itemData name="Comment"                defStyleNum="dsComment" />
+      <itemData name="Decimal"                defStyleNum="dsDecVal"       spellChecking="false"/>
+      <itemData name="Octal"                  defStyleNum="dsBaseN"        spellChecking="false"/>
+      <itemData name="Hex"                    defStyleNum="dsBaseN"        spellChecking="false"/>
+      <itemData name="Float"                  defStyleNum="dsFloat"        spellChecking="false"/>
+      <itemData name="Char"                   defStyleNum="dsChar"         spellChecking="false"/>
+      <itemData name="Symbol"                 defStyleNum="dsNormal"       spellChecking="false"/>
+    </itemDatas>
+    </highlighting>
+  <general>
+    <comments>
+      <comment name="singleLine" start="//" />
+      <comment name="multiLine" start="/*" end="*/" region="Comment"/>
+    </comments>
+    <keywords casesensitive="1" additionalDeliminator="'&quot;" />
+  </general>
+</language>
