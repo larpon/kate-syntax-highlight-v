@@ -1,6 +1,6 @@
 # V syntax highlighting for Kate
 
-WIP
+WIP syntax highlighting for the [V](https://vlang.io/) language.
 
 ## Install
 
