@@ -156,7 +156,7 @@ with this program; if not, write to the Free Software Foundation, Inc.,
       <context attribute="String" lineEndContext="#stay" name="Multiline String">
         <LineContinue attribute="String" context="#stay"/>
         <HlCStringChar attribute="String Char" context="#stay"/>
-        <DetectChar attribute="String" context="#pop" char="`"/>
+        <DetectChar attribute="String" context="#pop" char="'"/>
       </context>
     </contexts>
     <itemDatas>
@@ -184,6 +184,6 @@ with this program; if not, write to the Free Software Foundation, Inc.,
       <comment name="singleLine" start="//" />
       <comment name="multiLine" start="/*" end="*/" region="Comment"/>
     </comments>
-    <keywords casesensitive="1" additionalDeliminator="'&quot;" />
+    <keywords casesensitive="1" additionalDeliminator="'" />
   </general>
 </language>
