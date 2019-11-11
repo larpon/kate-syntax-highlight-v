@@ -85,10 +85,47 @@ with this program; if not, write to the Free Software Foundation, Inc.,
     <list name="tag_attributes">
         <item>[typedef]</item>
     </list>
-    <list name="modules">
-      <item>os</item>
+    <list name="vlib">
+      <item>arrays</item>
+      <item>benchmark</item>
+      <item>bignum</item>
+      <item>bitfield</item>
+      <item>compiler</item>
+      <item>crypto</item>
+      <item>darwin</item>
+      <item>encoding</item>
+      <item>filepath</item>
       <item>flag</item>
+      <item>freetype</item>
+      <item>gg</item>
+      <item>gl</item>
+      <item>glfw</item>
+      <item>glm</item>
+      <item>gx</item>
+      <item>hash</item>
+      <item>http</item>
+      <item>json</item>
+      <item>log</item>
+      <item>math</item>
+      <item>mysql</item>
+      <item>net</item>
+      <item>orm</item>
+      <item>os</item>
+      <item>os2</item>
+      <item>pg</item>
+      <item>rand</item>
+      <item>readline</item>
+      <item>runtime</item>
+      <item>sqlite</item>
+      <item>stbi</item>
+      <item>strconv</item>
+      <item>strings</item>
+      <item>sync</item>
+      <item>szip</item>
+      <item>term</item>
       <item>time</item>
+      <item>ui</item>
+      <item>vweb</item>
     </list>
     <list name="builtin">
       <item>len</item>
@@ -113,7 +150,7 @@ with this program; if not, write to the Free Software Foundation, Inc.,
       <context name="normal" attribute="Normal Text" lineEndContext="#stay">
         <keyword attribute="Keyword" context="#stay" String="keywords" />
         <keyword attribute="Flags" context="#stay" String="flags" />
-        <keyword attribute="Module" context="#stay" String="modules" />
+        <keyword attribute="Module" context="#stay" String="vlib" />
         <keyword attribute="Tag Attributes" context="#stay" String="tag_attributes" />
         <keyword attribute="Predeclared Identifier" context="#stay" String="predeclared"  />
         <keyword attribute="Data Type" context="#stay" String="types"       />
@@ -128,8 +165,8 @@ with this program; if not, write to the Free Software Foundation, Inc.,
         <HlCOct attribute="Octal" context="#stay"/>
         <HlCHex attribute="Hex" context="#stay"/>
         <HlCChar attribute="Char" context="#stay" />
+        <StringDetect attribute="String" String="'" context="MultiLineSingleString" beginRegion="MultiLineString"/>
         <DetectChar attribute="String" context="String" char="'" />
-        <!--<DetectChar attribute="String" context="Multiline String" char="`"/>-->
         <AnyChar attribute="Symbol" context="#stay" String=":!%&amp;()+,-/.*&lt;=&gt;?[]|~^&#59;"/>
       </context>
 
@@ -153,11 +190,10 @@ with this program; if not, write to the Free Software Foundation, Inc.,
         <DetectChar    attribute="String" context="#pop" char="'" />
       </context>
 
-      <context attribute="String" lineEndContext="#stay" name="Multiline String">
-        <LineContinue attribute="String" context="#stay"/>
-        <HlCStringChar attribute="String Char" context="#stay"/>
-        <DetectChar attribute="String" context="#pop" char="'"/>
+      <context attribute="String" lineEndContext="#stay" name="MultiLineSingleString">
+        <StringDetect attribute="String" context="#pop" String="'" endRegion="MultiLineString"/>
       </context>
+
     </contexts>
     <itemDatas>
       <itemData name="Normal Text"            defStyleNum="dsNormal"       spellChecking="false"/>
@@ -184,6 +220,5 @@ with this program; if not, write to the Free Software Foundation, Inc.,
       <comment name="singleLine" start="//" />
       <comment name="multiLine" start="/*" end="*/" region="Comment"/>
     </comments>
-    <keywords casesensitive="1" additionalDeliminator="'" />
   </general>
 </language>
