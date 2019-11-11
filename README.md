@@ -14,7 +14,7 @@ Copy to `%USERPROFILE%/AppData/Local/org.kde.syntax-highlighting/syntax`. (`%USE
 More info on katepart [here](https://docs.kde.org/stable5/en/applications/katepart/highlight.html)
 
 ## Usage
-Unfortunately files ending in `*.v` is also used by the Verlog language. To make V source files take precedence over Verilog you can go to:
+Unfortunately files ending in `*.v` is also used by the Verilog language. To make V source files take precedence over Verilog you can go to:
 Settings -> Editor Component -> Open / Save -> Modes & Filetypes -> Filetype: "Sources/V -> Priority: 1
 
 For setting a higher priority than Verilog.
