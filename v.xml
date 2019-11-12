@@ -166,7 +166,6 @@ with this program; if not, write to the Free Software Foundation, Inc.,
         <HlCHex attribute="Hex" context="#stay"/>
         <HlCChar attribute="Char" context="#stay" />
         <StringDetect attribute="String" String="'" context="MultiLineSingleString" beginRegion="MultiLineString"/>
-        <!--<DetectChar attribute="String" context="String" char="'" />-->
         <AnyChar attribute="Symbol" context="#stay" String=":!%&amp;()+,-/.*&lt;=&gt;?[]|~^&#59;"/>
       </context>
 
@@ -184,16 +183,6 @@ with this program; if not, write to the Free Software Foundation, Inc.,
         <DetectIdentifier />
       </context>
 
-      <!--
-      <context attribute="String" lineEndContext="#pop" name="String">
-        <HlCStringChar attribute="Escape"/>
-        <RegExpr attribute="Escape" String="\\[\\']" context="#stay"/>
-        <LineContinue  attribute="String" context="#stay" />
-        <HlCStringChar attribute="String Char" context="#stay" />
-        <DetectChar    attribute="String" context="#pop" char="'" />
-      </context>
-      -->
-
       <context attribute="String" lineEndContext="#stay" name="MultiLineSingleString">
         <HlCStringChar attribute="Escape"/>
         <RegExpr attribute="Escape" String="\\[\\']"/>
@@ -210,7 +199,6 @@ with this program; if not, write to the Free Software Foundation, Inc.,
       <itemData name="Predeclared Identifier" defStyleNum="dsOthers"       spellChecking="false" />
       <itemData name="Builtin Function"       defStyleNum="dsBuiltIn"      spellChecking="false" />
       <itemData name="Data Type"              defStyleNum="dsDataType"     spellChecking="false"/>
-      <!--<itemData name="String Char"            defStyleNum="dsChar"    />-->
       <itemData name="String"                 defStyleNum="dsString"  />
       <itemData name="Comment"                defStyleNum="dsComment" />
       <itemData name="Decimal"                defStyleNum="dsDecVal"       spellChecking="false"/>
