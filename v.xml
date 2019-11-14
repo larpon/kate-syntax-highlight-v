@@ -57,6 +57,10 @@ with this program; if not, write to the Free Software Foundation, Inc.,
       <item>struct</item>
       <item>match</item>
     </list>
+    <list name="scopes">
+      <item>asm</item>
+      <item>unsafe</item>
+    </list>
     <list name="types">
       <item>int</item>
       <item>i8</item>
@@ -83,7 +87,8 @@ with this program; if not, write to the Free Software Foundation, Inc.,
       <item>#include</item>
     </list>
     <list name="tag_attributes">
-        <item>[typedef]</item>
+        <item>typedef</item>
+        <item>live</item>
     </list>
     <list name="vlib">
       <item>arrays</item>
@@ -148,10 +153,11 @@ with this program; if not, write to the Free Software Foundation, Inc.,
     </list>
     <contexts>
       <context name="normal" attribute="Normal Text" lineEndContext="#stay">
+        <keyword attribute="Tag Attribute" context="#stay" String="tag_attributes" />
         <keyword attribute="Keyword" context="#stay" String="keywords" />
-        <keyword attribute="Flags" context="#stay" String="flags" />
+        <keyword attribute="Scope" context="#stay" String="scopes" />
+        <keyword attribute="Flag" context="#stay" String="flags" />
         <keyword attribute="Module" context="#stay" String="vlib" />
-        <keyword attribute="Tag Attributes" context="#stay" String="tag_attributes" />
         <keyword attribute="Predeclared Identifier" context="#stay" String="predeclared"  />
         <keyword attribute="Data Type" context="#stay" String="types"       />
         <keyword attribute="Builtin Function" context="#stay" String="builtin"  />
@@ -193,7 +199,8 @@ with this program; if not, write to the Free Software Foundation, Inc.,
     <itemDatas>
       <itemData name="Normal Text"            defStyleNum="dsNormal"       spellChecking="false"/>
       <itemData name="Keyword"                defStyleNum="dsKeyword"      spellChecking="false"/>
-      <itemData name="Flags"                  defStyleNum="dsPreprocessor" spellChecking="false"/>
+      <itemData name="Scope"                  defStyleNum="dsRegionMarker" spellChecking="false"/>
+      <itemData name="Flag"                   defStyleNum="dsPreprocessor" spellChecking="false"/>
       <itemData name="Module"                 defStyleNum="dsImport"       spellChecking="false"/>
       <itemData name="Tag Attribute"          defStyleNum="dsAttribute"    spellChecking="false"/>
       <itemData name="Predeclared Identifier" defStyleNum="dsOthers"       spellChecking="false" />
