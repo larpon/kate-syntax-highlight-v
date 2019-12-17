@@ -62,6 +62,7 @@ with this program; if not, write to the Free Software Foundation, Inc.,
       <item>unsafe</item>
     </list>
     <list name="types">
+      <item>atomic</item>
       <item>int</item>
       <item>i8</item>
       <item>i16</item>
@@ -76,6 +77,7 @@ with this program; if not, write to the Free Software Foundation, Inc.,
       <item>bool</item>
       <item>byte</item>
       <item>byteptr</item>
+      <item>charptr</item>
       <item>voidptr</item>
       <item>rune</item>
       <item>string</item>
