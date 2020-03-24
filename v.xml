@@ -173,7 +173,8 @@ with this program; if not, write to the Free Software Foundation, Inc.,
         <HlCOct attribute="Octal" context="#stay"/>
         <HlCHex attribute="Hex" context="#stay"/>
         <HlCChar attribute="Char" context="#stay" />
-        <StringDetect attribute="String" String="'" context="MultiLineSingleString" beginRegion="MultiLineString"/>
+        <DetectChar attribute="String" context="string" char="&quot;" />
+        <RegExpr attribute="String" String="['`]" context="MultiLineSingleString" beginRegion="MultiLineString"/>
         <AnyChar attribute="Symbol" context="#stay" String=":!%&amp;()+,-/.*&lt;=&gt;?[]|~^&#59;"/>
       </context>
 
@@ -194,7 +195,11 @@ with this program; if not, write to the Free Software Foundation, Inc.,
       <context attribute="String" lineEndContext="#stay" name="MultiLineSingleString">
         <HlCStringChar attribute="Escape"/>
         <RegExpr attribute="Escape" String="\\[\\']"/>
-        <StringDetect attribute="String" context="#pop" String="'" endRegion="MultiLineString"/>
+        <RegExpr attribute="String" context="#pop" String="['`]" endRegion="MultiLineString"/>
+      </context>
+
+      <context attribute="String" lineEndContext="#stay" name="string" >
+        <DetectChar attribute="String" context="#pop" char="&quot;" />
       </context>
 
     </contexts>
