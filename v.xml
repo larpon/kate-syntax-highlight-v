@@ -29,33 +29,33 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 <language name="V" version="0.2" kateversion="1.0" section="Sources" indenter="cstyle" mimetype="text/x-vlang" extensions="*.v,*.vh,*.vsh" author="Lars Pontoppidan (dev.larpon@gmail.com)" license="GPLv2+">
     <highlighting>
     <list name="keywords">
-      <item>mut</item>
-      <item>pub</item>
-      <item>assert</item>
-      <item>sizeof</item>
-      <item>type</item>
-      <item>enum</item>
-      <item>in</item>
-      <item>or</item>
-      <item>defer</item>
-      <item>break</item>
-      <item>module</item>
-      <item>const</item>
-      <item>continue</item>
-      <item>if</item>
-      <item>else</item>
+        <item>break</item>
+        <item>const</item>
+        <item>continue</item>
+        <item>defer</item>
+        <item>else</item>
+        <item>enum</item>
+        <item>fn</item>
+        <item>for</item>
+        <item>go</item>
+        <item>goto</item>
+        <item>if</item>
+        <item>import</item>
+        <item>in</item>
+        <item>interface</item>
+        <item>match</item>
+        <item>module</item>
+        <item>none</item>
+        <item>or</item>
+        <item>pub</item>
+        <item>return</item>
+        <item>struct</item>
+        <item>type</item>
+        <item>var</item>
+    </list>
+    <list name="compiler-keywords">
       <item>$if</item>
       <item>$else</item>
-      <item>for</item>
-      <item>fn</item>
-      <item>go</item>
-      <item>goto</item>
-      <item>import</item>
-      <item>interface</item>
-      <item>map</item>
-      <item>return</item>
-      <item>struct</item>
-      <item>match</item>
     </list>
     <list name="scopes">
       <item>asm</item>
@@ -63,6 +63,7 @@ with this program; if not, write to the Free Software Foundation, Inc.,
     </list>
     <list name="types">
       <item>atomic</item>
+      <item>mut</item>
       <item>int</item>
       <item>i8</item>
       <item>i16</item>
@@ -91,6 +92,7 @@ with this program; if not, write to the Free Software Foundation, Inc.,
     <list name="tag_attributes">
         <item>typedef</item>
         <item>live</item>
+        <item>inline</item>
     </list>
     <list name="vlib">
       <item>arrays</item>
@@ -137,6 +139,7 @@ with this program; if not, write to the Free Software Foundation, Inc.,
     <list name="builtin">
       <item>len</item>
       <item>println</item>
+      <item>print</item>
       <item>eprintln</item>
     </list>
     <list name="predeclared">
@@ -145,6 +148,7 @@ with this program; if not, write to the Free Software Foundation, Inc.,
       <item>linux</item>
       <item>windows</item>
       <item>mac</item>
+	  <item>darwin</item>
       <item>freebsd</item>
       <item>openbsd</item>
       <item>netbsd</item>
