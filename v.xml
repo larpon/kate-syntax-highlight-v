@@ -94,6 +94,7 @@ with this program; if not, write to the Free Software Foundation, Inc.,
         <item>typedef</item>
         <item>live</item>
         <item>inline</item>
+        <item>direct_array_access</item>
     </list>
     <list name="vlib">
       <item>arrays</item>
@@ -171,15 +172,15 @@ with this program; if not, write to the Free Software Foundation, Inc.,
         <DetectChar attribute="Symbol" context="#stay" char="{" beginRegion="Brace1" />
         <DetectChar attribute="Symbol" context="#stay" char="}" endRegion="Brace1"   />
         <Detect2Chars attribute="Comment" context="Commentar 1" char="/" char1="/"   />
-        <Detect2Chars attribute="Comment" context="Commentar 2" char="/" char1="*"   />
+        <Detect2Chars attribute="Comment" context="Commentar 2" char="/" char1="*" beginRegion="Comment" />
         <Int attribute="Decimal" context="#stay" />
         <Float attribute="Float" context="#stay" />
         <HlCOct attribute="Octal" context="#stay"/>
         <HlCHex attribute="Hex" context="#stay"/>
         <HlCChar attribute="Char" context="#stay" />
+        <RegExpr attribute="String" String="[']" context="MultiLineSingleString" beginRegion="MultiLineString"/>
         <DetectChar attribute="String" context="string" char="`" />
         <DetectChar attribute="String" context="string" char="&quot;" />
-        <RegExpr attribute="String" String="[']" context="MultiLineSingleString" beginRegion="MultiLineString"/>
         <AnyChar attribute="Symbol" context="#stay" String=":!%&amp;()+,-/.*&lt;=&gt;?[]|~^&#59;"/>
       </context>
 
@@ -197,15 +198,15 @@ with this program; if not, write to the Free Software Foundation, Inc.,
         <DetectIdentifier />
       </context>
 
+      <context attribute="String" lineEndContext="#stay" name="string" >
+        <DetectChar attribute="String" context="#pop" char="&quot;" />
+        <DetectChar attribute="String" context="#pop" char="`" />
+      </context>
+
       <context attribute="String" lineEndContext="#stay" name="MultiLineSingleString">
         <HlCStringChar attribute="Escape"/>
         <RegExpr attribute="Escape" String="\\[\\']"/>
         <RegExpr attribute="String" context="#pop" String="[']" endRegion="MultiLineString"/>
-      </context>
-
-      <context attribute="String" lineEndContext="#stay" name="string" >
-        <DetectChar attribute="String" context="#pop" char="&quot;" />
-        <DetectChar attribute="String" context="#pop" char="`" />
       </context>
 
     </contexts>
