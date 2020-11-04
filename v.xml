@@ -199,13 +199,15 @@ with this program; if not, write to the Free Software Foundation, Inc.,
       </context>
 
       <context attribute="String" lineEndContext="#stay" name="string" >
-        <DetectChar attribute="String" context="#pop" char="&quot;" />
+        <HlCStringChar attribute="Escape"/>
+        <RegExpr attribute="Escape" String="\\[`]"/>
         <DetectChar attribute="String" context="#pop" char="`" />
+        <DetectChar attribute="String" context="#pop" char="&quot;" />
       </context>
 
       <context attribute="String" lineEndContext="#stay" name="MultiLineSingleString">
         <HlCStringChar attribute="Escape"/>
-        <RegExpr attribute="Escape" String="\\[\\']"/>
+        <RegExpr attribute="Escape" String="\\[']"/>
         <RegExpr attribute="String" context="#pop" String="[']" endRegion="MultiLineString"/>
       </context>
 
