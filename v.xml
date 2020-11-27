@@ -171,6 +171,8 @@ with this program; if not, write to the Free Software Foundation, Inc.,
         <DetectIdentifier />
         <DetectChar attribute="Symbol" context="#stay" char="{" beginRegion="Brace1" />
         <DetectChar attribute="Symbol" context="#stay" char="}" endRegion="Brace1"   />
+		<DetectChar attribute="Symbol" context="#stay" char="[" beginRegion="Bracket1" />
+        <DetectChar attribute="Symbol" context="#stay" char="]" endRegion="Bracket1"   />
         <Detect2Chars attribute="Comment" context="Commentar 1" char="/" char1="/"   />
         <Detect2Chars attribute="Comment" context="Commentar 2" char="/" char1="*" beginRegion="Comment" />
         <Int attribute="Decimal" context="#stay" />
