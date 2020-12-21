@@ -64,6 +64,7 @@ with this program; if not, write to the Free Software Foundation, Inc.,
     </list>
     <list name="types">
       <item>atomic</item>
+      <item>chan</item>
       <item>mut</item>
       <item>int</item>
       <item>i8</item>
