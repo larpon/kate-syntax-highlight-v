@@ -84,6 +84,7 @@ with this program; if not, write to the Free Software Foundation, Inc.,
       <item>voidptr</item>
       <item>rune</item>
       <item>string</item>
+	  <item>size_t</item>
       <item>ustring</item>
       <item>none</item>
     </list>
