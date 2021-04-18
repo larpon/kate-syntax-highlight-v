@@ -53,7 +53,7 @@ with this program; if not, write to the Free Software Foundation, Inc.,
         <item>struct</item>
         <item>type</item>
     </list>
-    <list name="compiler-keywords">
+    <list name="compile_time_keywords">
       <item>$if</item>
       <item>$else</item>
       <item>$for</item>
@@ -164,6 +164,7 @@ with this program; if not, write to the Free Software Foundation, Inc.,
       <context name="normal" attribute="Normal Text" lineEndContext="#stay">
         <keyword attribute="Tag Attribute" context="#stay" String="tag_attributes" />
         <keyword attribute="Keyword" context="#stay" String="keywords" />
+        <keyword attribute="Compile Time Keyword" context="#stay" String="compile_time_keywords" />
         <keyword attribute="Predeclared Identifier" context="#stay" String="predeclared"  />
         <keyword attribute="Scope" context="#stay" String="scopes" />
         <keyword attribute="Flag" context="#stay" String="flags" />
@@ -173,7 +174,7 @@ with this program; if not, write to the Free Software Foundation, Inc.,
         <DetectIdentifier />
         <DetectChar attribute="Symbol" context="#stay" char="{" beginRegion="Brace1" />
         <DetectChar attribute="Symbol" context="#stay" char="}" endRegion="Brace1"   />
-		<DetectChar attribute="Symbol" context="#stay" char="[" beginRegion="Bracket1" />
+        <DetectChar attribute="Symbol" context="#stay" char="[" beginRegion="Bracket1" />
         <DetectChar attribute="Symbol" context="#stay" char="]" endRegion="Bracket1"   />
         <Detect2Chars attribute="Comment" context="Commentar 1" char="/" char1="/"   />
         <Detect2Chars attribute="Comment" context="Commentar 2" char="/" char1="*" beginRegion="Comment" />
@@ -219,6 +220,7 @@ with this program; if not, write to the Free Software Foundation, Inc.,
     <itemDatas>
       <itemData name="Normal Text"            defStyleNum="dsNormal"       spellChecking="false"/>
       <itemData name="Keyword"                defStyleNum="dsKeyword"      spellChecking="false"/>
+      <itemData name="Compile Time Keyword"   defStyleNum="dsPreprocessor" spellChecking="false"/>
       <itemData name="Scope"                  defStyleNum="dsRegionMarker" spellChecking="false"/>
       <itemData name="Flag"                   defStyleNum="dsPreprocessor" spellChecking="false"/>
       <itemData name="Module"                 defStyleNum="dsImport"       spellChecking="false"/>
