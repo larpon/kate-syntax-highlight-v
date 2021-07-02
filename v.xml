@@ -64,6 +64,7 @@ with this program; if not, write to the Free Software Foundation, Inc.,
     </list>
     <list name="types">
       <item>atomic</item>
+	  <item>thread</item>
       <item>chan</item>
       <item>mut</item>
       <item>int</item>
@@ -84,19 +85,42 @@ with this program; if not, write to the Free Software Foundation, Inc.,
       <item>voidptr</item>
       <item>rune</item>
       <item>string</item>
-	  <item>size_t</item>
+      <item>size_t</item>
       <item>ustring</item>
       <item>none</item>
     </list>
     <list name="flags">
       <item>#flag</item>
       <item>#include</item>
+      <item>#define</item>
     </list>
     <list name="tag_attributes">
         <item>typedef</item>
         <item>live</item>
         <item>inline</item>
+        <item>no_inline</item>
+        <item>irq_handler</item>
+        <item>_cold</item>
+        <item>_constructor</item>
+        <item>_destructor</item>
+        <item>_flatten</item>
+        <item>_hot</item>
+        <item>_malloc</item>
+        <item>_pointer</item>
+        <item>_pure</item>
+        <item>_naked</item>
+        <item>windows_stdcall</item>
+        <item>heap</item>
         <item>direct_array_access</item>
+        <item>deprecated</item>
+        <item>deprecated_after</item>
+        <item>trusted</item>
+        <item>unsafe</item>
+        <item>manualfree</item>
+        <item>console</item>
+        <item>noinline</item>
+        <item>keep_args_alive</item>
+        <item>trace_error</item>
     </list>
     <list name="vlib">
       <item>arrays</item>
