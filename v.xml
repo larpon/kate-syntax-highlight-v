@@ -50,6 +50,7 @@ with this program; if not, write to the Free Software Foundation, Inc.,
         <item>or</item>
         <item>pub</item>
         <item>return</item>
+        <item>static</item>
         <item>struct</item>
         <item>type</item>
     </list>
