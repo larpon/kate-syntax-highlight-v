@@ -115,6 +115,7 @@ with this program; if not, write to the Free Software Foundation, Inc.,
         <item>direct_array_access</item>
         <item>deprecated</item>
         <item>deprecated_after</item>
+        <item>required</item>
         <item>trusted</item>
         <item>unsafe</item>
         <item>manualfree</item>
