@@ -50,6 +50,7 @@ with this program; if not, write to the Free Software Foundation, Inc.,
         <item>or</item>
         <item>pub</item>
         <item>return</item>
+        <item>shared</item>
         <item>static</item>
         <item>struct</item>
         <item>type</item>
@@ -65,7 +66,7 @@ with this program; if not, write to the Free Software Foundation, Inc.,
     </list>
     <list name="types">
       <item>atomic</item>
-	  <item>thread</item>
+      <item>thread</item>
       <item>chan</item>
       <item>mut</item>
       <item>int</item>
@@ -166,7 +167,9 @@ with this program; if not, write to the Free Software Foundation, Inc.,
       <item>vweb</item>
     </list>
     <list name="builtin">
+      <item>error</item>
       <item>len</item>
+      <item>panic</item>
       <item>println</item>
       <item>print</item>
       <item>eprintln</item>
@@ -209,9 +212,9 @@ with this program; if not, write to the Free Software Foundation, Inc.,
         <HlCOct attribute="Octal" context="#stay"/>
         <HlCHex attribute="Hex" context="#stay"/>
         <HlCChar attribute="Char" context="#stay" />
-        <RegExpr attribute="String" String="[']" context="MultiLineSingleString" beginRegion="MultiLineString"/>
-        <DetectChar attribute="String" context="string" char="`" />
-        <DetectChar attribute="String" context="string" char="&quot;" />
+        <RegExpr attribute="String" String="[']" context="LiteralString" beginRegion="MultiLineString"/>
+        <RegExpr attribute="String" String="[&quot;]" context="BasicString" beginRegion="MultiLineString"/>
+        <RegExpr attribute="Char" String="[`]" context="SingleChar" beginRegion="MultiLineString"/>
         <AnyChar attribute="Symbol" context="#stay" String=":!%&amp;()+,-/.*&lt;=&gt;?[]|~^&#59;"/>
       </context>
 
@@ -229,14 +232,19 @@ with this program; if not, write to the Free Software Foundation, Inc.,
         <DetectIdentifier />
       </context>
 
-      <context attribute="String" lineEndContext="#stay" name="string" >
+      <context attribute="Char" lineEndContext="#stay" name="SingleChar">
         <HlCStringChar attribute="Escape"/>
         <RegExpr attribute="Escape" String="\\[`]"/>
-        <DetectChar attribute="String" context="#pop" char="`" />
-        <DetectChar attribute="String" context="#pop" char="&quot;" />
+        <RegExpr attribute="Char" context="#pop" String="[`]" endRegion="MultiLineString"/>
       </context>
 
-      <context attribute="String" lineEndContext="#stay" name="MultiLineSingleString">
+      <context attribute="String" lineEndContext="#stay" name="BasicString">
+        <HlCStringChar attribute="Escape"/>
+        <RegExpr attribute="Escape" String="\\[&quot;]"/>
+        <RegExpr attribute="String" context="#pop" String="[&quot;]" endRegion="MultiLineString"/>
+      </context>
+
+      <context attribute="String" lineEndContext="#stay" name="LiteralString">
         <HlCStringChar attribute="Escape"/>
         <RegExpr attribute="Escape" String="\\[']"/>
         <RegExpr attribute="String" context="#pop" String="[']" endRegion="MultiLineString"/>
