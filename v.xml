@@ -124,6 +124,7 @@ with this program; if not, write to the Free Software Foundation, Inc.,
         <item>noinline</item>
         <item>keep_args_alive</item>
         <item>trace_error</item>
+        <item>has_globals</item>
     </list>
     <list name="vlib">
       <item>arrays</item>
