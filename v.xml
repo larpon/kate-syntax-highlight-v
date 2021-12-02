@@ -29,6 +29,7 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 <language name="V" version="0.2" kateversion="1.0" section="Sources" indenter="cstyle" mimetype="text/x-vlang" extensions="*.v,*.vh,*.vsh" author="Lars Pontoppidan (dev.larpon@gmail.com)" license="GPLv2+">
     <highlighting>
     <list name="keywords">
+        <item>as</item>
         <item>assert</item>
         <item>break</item>
         <item>const</item>
@@ -44,6 +45,7 @@ with this program; if not, write to the Free Software Foundation, Inc.,
         <item>import</item>
         <item>in</item>
         <item>interface</item>
+        <item>is</item>
         <item>match</item>
         <item>module</item>
         <item>none</item>
