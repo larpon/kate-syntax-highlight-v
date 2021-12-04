@@ -70,6 +70,7 @@ with this program; if not, write to the Free Software Foundation, Inc.,
       <item>atomic</item>
       <item>thread</item>
       <item>chan</item>
+      <item>char</item>
       <item>mut</item>
       <item>int</item>
       <item>i8</item>
