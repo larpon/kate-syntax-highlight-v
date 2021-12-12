@@ -58,9 +58,10 @@ with this program; if not, write to the Free Software Foundation, Inc.,
         <item>type</item>
     </list>
     <list name="compile_time_keywords">
-      <item>$if</item>
       <item>$else</item>
+      <item>$embed_file</item>
       <item>$for</item>
+      <item>$if</item>
     </list>
     <list name="scopes">
       <item>asm</item>
