@@ -99,6 +99,7 @@ with this program; if not, write to the Free Software Foundation, Inc.,
       <item>#flag</item>
       <item>#include</item>
       <item>#define</item>
+      <item>#pkgconfig</item>
     </list>
     <list name="tag_attributes">
         <item>typedef</item>
