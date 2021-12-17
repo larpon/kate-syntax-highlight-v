@@ -70,7 +70,8 @@ with this program; if not, write to the Free Software Foundation, Inc.,
     </list>
     <list name="types">
       <item>atomic</item>
-      <item>thread</item>
+      <item>bool</item>
+      <item>byte</item>
       <item>chan</item>
       <item>char</item>
       <item>mut</item>
@@ -85,14 +86,12 @@ with this program; if not, write to the Free Software Foundation, Inc.,
       <item>u128</item>
       <item>f32</item>
       <item>f64</item>
-      <item>bool</item>
-      <item>byte</item>
-      <item>byteptr</item>
-      <item>charptr</item>
       <item>voidptr</item>
       <item>rune</item>
       <item>string</item>
-      <item>size_t</item>
+      <item>thread</item>
+      <item>usize</item>
+      <item>isize</item>
       <item>ustring</item>
       <item>none</item>
     </list>
