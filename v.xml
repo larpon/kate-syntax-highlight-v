@@ -183,17 +183,25 @@ with this program; if not, write to the Free Software Foundation, Inc.,
     <list name="predeclared">
       <item>false</item>
       <item>true</item>
+      <item>ios</item>
+      <item>macos</item>
+	  <item>darwin</item>
       <item>linux</item>
       <item>windows</item>
-      <item>macos</item>
-      <item>darwin</item>
       <item>freebsd</item>
       <item>openbsd</item>
       <item>netbsd</item>
       <item>dragonfly</item>
-      <item>js</item>
+      <item>js_node</item>
+      <item>js_browser</item>
+      <item>js_freestanding</item>
       <item>android</item>
       <item>solaris</item>
+      <item>serenity</item>
+      <item>vinix</item>
+      <item>haiku</item>
+      <item>raw</item>
+      <item>all</item>
     </list>
     <contexts>
       <context name="normal" attribute="Normal Text" lineEndContext="#stay">
