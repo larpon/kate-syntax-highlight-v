@@ -185,7 +185,7 @@ with this program; if not, write to the Free Software Foundation, Inc.,
       <item>true</item>
       <item>ios</item>
       <item>macos</item>
-	  <item>darwin</item>
+      <item>darwin</item>
       <item>linux</item>
       <item>windows</item>
       <item>freebsd</item>
