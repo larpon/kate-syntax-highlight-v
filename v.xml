@@ -183,6 +183,7 @@ with this program; if not, write to the Free Software Foundation, Inc.,
     </list>
     <list name="predeclared">
       <item>false</item>
+      <item>gc_bohem</item>
       <item>true</item>
       <item>ios</item>
       <item>macos</item>
@@ -203,6 +204,7 @@ with this program; if not, write to the Free Software Foundation, Inc.,
       <item>haiku</item>
       <item>raw</item>
       <item>all</item>
+      <item>tinyc</item>
     </list>
     <contexts>
       <context name="normal" attribute="Normal Text" lineEndContext="#stay">
