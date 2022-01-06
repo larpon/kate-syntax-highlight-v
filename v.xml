@@ -102,6 +102,7 @@ with this program; if not, write to the Free Software Foundation, Inc.,
       <item>#pkgconfig</item>
     </list>
     <list name="tag_attributes">
+        <item>flag</item>
         <item>typedef</item>
         <item>live</item>
         <item>inline</item>
