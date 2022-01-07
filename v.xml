@@ -194,6 +194,12 @@ with this program; if not, write to the Free Software Foundation, Inc.,
       <item>openbsd</item>
       <item>netbsd</item>
       <item>dragonfly</item>
+      <item>amd64</item>
+      <item>arm64</item>
+      <item>arm32</item>
+      <item>rv64</item>
+      <item>rv32</item>
+      <item>i386</item>
       <item>js_node</item>
       <item>js_browser</item>
       <item>js_freestanding</item>
@@ -204,7 +210,12 @@ with this program; if not, write to the Free Software Foundation, Inc.,
       <item>haiku</item>
       <item>raw</item>
       <item>all</item>
+      <item>gcc</item>
       <item>tinyc</item>
+      <item>clang</item>
+      <item>mingw</item>
+      <item>msvc</item>
+      <item>cplusplus</item>
     </list>
     <contexts>
       <context name="normal" attribute="Normal Text" lineEndContext="#stay">
