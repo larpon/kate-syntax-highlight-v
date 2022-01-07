@@ -188,21 +188,43 @@ with this program; if not, write to the Free Software Foundation, Inc.,
       <item>ios</item>
       <item>macos</item>
       <item>darwin</item>
+      <item>mach</item>
       <item>linux</item>
+      <item>hpux</item>
+      <item>gnu</item>
+      <item>qnx</item>
       <item>windows</item>
       <item>freebsd</item>
       <item>openbsd</item>
       <item>netbsd</item>
+      <item>bsd</item>
       <item>dragonfly</item>
+      <item>x64</item>
+      <item>x32</item>
+      <item>little_endian</item>
+      <item>big_endian</item>
       <item>amd64</item>
       <item>arm64</item>
       <item>arm32</item>
       <item>rv64</item>
       <item>rv32</item>
       <item>i386</item>
+      <item>aarch64</item>
       <item>js_node</item>
       <item>js_browser</item>
       <item>js_freestanding</item>
+      <item>apk</item>
+      <item>js</item>
+      <item>debug</item>
+      <item>prod</item>
+      <item>test</item>
+      <item>glibc</item>
+      <item>prealloc</item>
+      <item>no_bounds_checking</item>
+      <item>freestanding</item>
+      <item>threads</item>
+      <item>interpreter</item>
+      <item>es5</item>
       <item>android</item>
       <item>solaris</item>
       <item>serenity</item>
