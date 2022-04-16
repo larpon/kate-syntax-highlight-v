@@ -71,11 +71,12 @@ with this program; if not, write to the Free Software Foundation, Inc.,
     <list name="types">
       <item>atomic</item>
       <item>bool</item>
-      <item>byte</item>
       <item>chan</item>
       <item>char</item>
       <item>mut</item>
       <item>int</item>
+	  <item>u8</item>
+	  <item>byte</item>
       <item>i8</item>
       <item>i16</item>
       <item>i64</item>
