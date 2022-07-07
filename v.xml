@@ -49,6 +49,7 @@ with this program; if not, write to the Free Software Foundation, Inc.,
         <item>match</item>
         <item>module</item>
         <item>none</item>
+        <item>nil</item>
         <item>or</item>
         <item>pub</item>
         <item>return</item>
@@ -63,6 +64,8 @@ with this program; if not, write to the Free Software Foundation, Inc.,
       <item>$embed_file</item>
       <item>$for</item>
       <item>$if</item>
+      <item>$env</item>
+      <item>$pkgconfig</item>
     </list>
     <list name="scopes">
       <item>asm</item>
@@ -75,8 +78,8 @@ with this program; if not, write to the Free Software Foundation, Inc.,
       <item>char</item>
       <item>mut</item>
       <item>int</item>
-	  <item>u8</item>
-	  <item>byte</item>
+      <item>u8</item>
+      <item>byte</item>
       <item>i8</item>
       <item>i16</item>
       <item>i64</item>
@@ -95,6 +98,7 @@ with this program; if not, write to the Free Software Foundation, Inc.,
       <item>isize</item>
       <item>ustring</item>
       <item>none</item>
+      <item>nil</item>
     </list>
     <list name="flags">
       <item>#flag</item>
@@ -227,6 +231,7 @@ with this program; if not, write to the Free Software Foundation, Inc.,
       <item>interpreter</item>
       <item>es5</item>
       <item>android</item>
+      <item>termux</item>
       <item>solaris</item>
       <item>serenity</item>
       <item>vinix</item>
