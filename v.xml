@@ -64,6 +64,9 @@ with this program; if not, write to the Free Software Foundation, Inc.,
       <item>$embed_file</item>
       <item>$for</item>
       <item>$if</item>
+      <item>$Array</item>
+      <item>$Map</item>
+      <item>$Struct</item>
       <item>$env</item>
       <item>$pkgconfig</item>
     </list>
@@ -103,6 +106,7 @@ with this program; if not, write to the Free Software Foundation, Inc.,
     <list name="flags">
       <item>#flag</item>
       <item>#include</item>
+      <item>#insert</item>
       <item>#define</item>
       <item>#pkgconfig</item>
     </list>
