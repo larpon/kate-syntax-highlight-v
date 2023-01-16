@@ -40,6 +40,7 @@ with this program; if not, write to the Free Software Foundation, Inc.,
         <item>fn</item>
         <item>for</item>
         <item>go</item>
+        <item>spawn</item>
         <item>goto</item>
         <item>if</item>
         <item>import</item>
