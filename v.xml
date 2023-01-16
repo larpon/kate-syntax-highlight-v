@@ -1,32 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE language SYSTEM "language.dtd">
-
-<!--
-This file is part of KDE's Kate project
-
-V.XML supports syntax highlighting for the V programming language
-under Kate. V is a simple, fast, safe, compiled language for developing maintainable software.
-V is developed by Alexander Medvednikov.
-
-Copyright (C) 2019, Lars Pontoppidan <dev.larpon@gmail.com>
-
-This program, including associated files, is free software.  You may
-distribute it and/or modify it under the terms of the GNU General Public
-License as published by the Free Software Foundation; either Version 2 of
-the license, or (at your option) any later version.
-
-This program is distributed in the hope that it will be useful, but
-WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
-or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License
-for more details.
-
-You should have received a copy of the GNU General Public License along
-with this program; if not, write to the Free Software Foundation, Inc.,
-51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
--->
-
-
-<language name="V" version="0.2" kateversion="1.0" section="Sources" indenter="cstyle" mimetype="text/x-vlang" extensions="*.v,*.vh,*.vsh" author="Lars Pontoppidan (dev.larpon@gmail.com)" license="GPLv2+">
+<language name="V" version="0.3" kateversion="1.0" section="Sources" indenter="cstyle" mimetype="text/x-vlang" extensions="*.v,*.vh,*.vsh" author="Lars Pontoppidan (dev.larpon@gmail.com)" license="MIT">
     <highlighting>
     <list name="keywords">
         <item>as</item>
