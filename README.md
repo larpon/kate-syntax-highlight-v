@@ -4,6 +4,10 @@ Syntax highlighting for the [V](https://vlang.io/) language.
 
 ## Install
 
+### NOTE
+The xml contents of this repository is now upstreamed to [KDE/syntax-highlighting](https://github.com/KDE/syntax-highlighting/blob/master/data/syntax/v.xml).
+That means newer versions of KDE will ship with V syntax support.
+
 ### Linux/Unix
 Add `v.xml` symlink (or copy file) to:
 `$HOME/.local/share/katepart5/syntax`
