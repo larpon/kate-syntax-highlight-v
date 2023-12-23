@@ -57,9 +57,9 @@
             <item>mut</item>
             <item>int</item>
             <item>u8</item>
-            <item>byte</item>
             <item>i8</item>
             <item>i16</item>
+            <item>i32</item>
             <item>i64</item>
             <item>i128</item>
             <item>u16</item>
