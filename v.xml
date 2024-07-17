@@ -35,10 +35,11 @@
             <item>union</item>
         </list>
         <list name="compile_time_keywords">
+            <item>$if</item>
             <item>$else</item>
             <item>$embed_file</item>
             <item>$for</item>
-            <item>$if</item>
+            <item>$d</item>
             <item>$Array</item>
             <item>$Map</item>
             <item>$Struct</item>
@@ -158,6 +159,7 @@
             <item>vweb</item>
         </list>
         <list name="builtin">
+            <item>arguments</item>
             <item>error</item>
             <item>len</item>
             <item>panic</item>
